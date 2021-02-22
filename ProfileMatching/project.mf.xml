@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<manifest>
+    <application name="ProfileMatching">
+        <crown name="AnalyzeHeightMap">
+            <desc>user script</desc>
+            <serves/>
+        </crown>
+        <meta key="author">AppSpace sample</meta>
+        <meta key="version">1.0</meta>
+        <meta key="licensed">false</meta>
+        <meta key="priority">low</meta>
+        <meta key="copy-protected">false</meta>
+        <meta key="read-protected">false</meta>
+        <entry path="pages" default="Viewer-2.4.0.1.msdd">
+            <file type="application/zip">Viewer-2.4.0.1.msdd</file>
+        </entry>
+        <entry path="resources">
+            <file type="application">heightMap.json</file>
+        </entry>
+        <entry path="scripts" default="ProfileMatching.lua">
+            <file type="text/x-lua">helpers.lua</file>
+            <file type="text/x-lua">ProfileMatching.lua</file>
+        </entry>
+    </application>
+</manifest>
