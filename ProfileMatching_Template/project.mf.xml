@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <manifest>
-    <application name="ProfileMatching">
-        <crown name="AnalyzeHeightMap">
+    <application name="ProfileMatching_Template">
+        <crown name="ProfileMatching_Template">
             <desc>user script</desc>
-            <serves/>
         </crown>
-        <meta key="author">AppSpace sample</meta>
+        <meta key="author">Gabriel Musset</meta>
         <meta key="version">1.0</meta>
         <meta key="priority">low</meta>
         <meta key="copy-protected">false</meta>
         <meta key="read-protected">false</meta>
-        <entry default="ProfileMatching.lua" path="scripts"/>
+        <entry default="helpers.lua" path="scripts"/>
     </application>
 </manifest>
