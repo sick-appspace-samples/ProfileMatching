@@ -68,7 +68,7 @@ local function main()
   -- Process data and start over three times ------
   -------------------------------------------------
 
-  for iRepeat = 1, 3 do
+  for _ = 1, 3 do
     for i = 0, heightMapH - 1, stepsize do
       local profilingTime = DateTime.getTimestamp()
 
@@ -115,20 +115,18 @@ local function main()
       -- Plot results -
       -------------------------------------------------
       local gDeco = View.GraphDecoration.create()
-      gDeco:setXBounds(0, 100)
-      gDeco:setYBounds(0, 40)
-      gDeco:setDrawSize(0.8)
+      gDeco:setXBounds(0, 100):setYBounds(0, 40):setDrawSize(0.8)
 
       -- Plot current profile
       v2D:clear()
-      v2D:addProfile(frameProfile, gDeco)
+      local id = v2D:addProfile(frameProfile, gDeco)
 
       -- Plot teach profile in best match position
       gDeco:setGraphColor(failPassColor[1], failPassColor[2], failPassColor[3])
       gDeco:setBackgroundColor(0, 0, 0, 0)
       gDeco:setGridColor(0, 0, 0, 0)
       plotProfile:translateInplace(translation, 0)
-      v2D:addProfile(plotProfile, gDeco)
+      v2D:addProfile(plotProfile, gDeco, nil, id)
 
       local scannedFrame = scanBox:translate(0, i * pixelSizeY, 0) -- move scan box to the current frame
 
